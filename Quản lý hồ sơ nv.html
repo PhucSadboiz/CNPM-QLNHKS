@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <div class="profile-container">
+        <h2>Hồ sơ nhân viên</h2>
+        <form action="/employee/profile" method="post">
+            <label for="employee-id">Mã nhân viên</label>
+            <input type="text" id="employee-id" name="employee-id" placeholder="Nhập mã nhân viên" required>
+
+            <label for="employee-name">Tên nhân viên</label>
+            <input type="text" id="employee-name" name="employee-name" placeholder="Nhập tên nhân viên" required>
+
+            <label for="employee-address">Địa chỉ</label>
+            <input type="text" id="employee-address" name="employee-address" placeholder="Nhập địa chỉ" required>
+
+            <label for="employee-dob">Ngày tháng năm sinh</label>
+            <input type="date" id="employee-dob" name="employee-dob" required>
+
+            <label for="employee-gender">Giới tính</label>
+            <select id="employee-gender" name="employee-gender" required>
+                <option value="">Chọn giới tính</option>
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+                <option value="other">Khác</option>
+            </select>
+
+            <input type="submit" value="Lưu hồ sơ">
+        </form>
+    </div>
+</body>
+</html>

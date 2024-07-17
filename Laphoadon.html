@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laphoadon</title>
+    <link rel = "stylesheet" href="base.css">
+</head>
+<body>
+    <div class="invoice-container">
+        <h2>Lập Hóa Đơn</h2>
+        <form id="invoice-form">
+            <div for="invoice-id">Mã Hóa Đơn</div>
+            <input type="text" id="invoice-id" name="invoice-id" required>
+    
+            <div for="invoice-date">Ngày Lập Hóa Đơn</div>
+            <input type="date" id="invoice-date" name="invoice-date" required>
+    
+            <div for="room-id">Mã Phòng</div>
+            <input type="text" id="room-id" name="room-id" required>
+    
+            <div for="recipient-name">Người Nhận Phòng</div>
+            <input type="text" id="recipient-name" name="recipient-name" required>
+    
+            <div for="customer-phone">Số Điện Thoại Khách Hàng</div>
+            <input type="tel" id="customer-phone" name="customer-phone" required>
+    
+            <div for="check-in-date">Ngày Nhận</div>
+            <input type="date" id="check-in-date" name="check-in-date" required>
+    
+            <div for="check-out-date">Ngày Trả</div>
+            <input type="date" id="check-out-date" name="check-out-date" required>
+    
+            <div for="unit-price">Đơn Giá</div>
+            <input type="number" id="unit-price" name="unit-price" required>
+    
+            <div for="additional-fees">Phí Phát Sinh</div>
+            <input type="number" id="additional-fees" name="additional-fees" required>
+    
+            <button type="submit">Lập Hóa Đơn</button>
+        </form>
+    </div>   
+</body>
+</html>

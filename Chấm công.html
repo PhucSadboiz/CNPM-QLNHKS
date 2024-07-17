@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <div class="attendance-container">
+        <h2>Chấm công nhân viên</h2>
+        <form action="/employee/attendance" method="post">
+            <div for="employee-id">Mã nhân viên</div>
+            <input type="text" id="employee-id" name="employee-id" placeholder="Nhập mã nhân viên">
+
+            <div for="employee-name">Tên nhân viên</div>
+            <input type="text" id="employee-name" name="employee-name" placeholder="Nhập tên nhân viên">
+
+            <div for="department">Bộ phận</div>
+            <input type="text" id="department" name="department" placeholder="Nhập bộ phận">
+
+            <div for="position">Chức vụ</div>
+            <input type="text" id="position" name="position" placeholder="Nhập chức vụ">
+
+            <div for="work-days">Ngày làm việc</div>
+            <input type="number" id="work-days" name="work-days" placeholder="Nhập số ngày làm việc">
+
+            <div for="leave-days">Ngày nghỉ phép</div>
+            <input type="number" id="leave-days" name="leave-days" placeholder="Nhập số ngày nghỉ phép">
+
+            <div for="total-days">Tổng ngày làm việc</div>
+            <input type="number" id="total-days" name="total-days" placeholder="Nhập tổng số ngày làm việc">
+
+            <input type="submit" value="Lưu chấm công">
+        </form>
+    </div>
+</body>
+</html>

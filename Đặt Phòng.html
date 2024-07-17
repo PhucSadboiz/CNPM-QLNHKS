@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <div class="booking-container">
+        <h2>Đặt Phòng</h2>
+        <div class="error-message" id="error-message"></div>
+        <form id="booking-form">
+            <div class="form-group full-width">
+                <label for="account-id">Mã Tài Khoản</label>
+                <input type="text" id="account-id" name="account-id" required>
+            </div>
+            <div class="form-group">
+                <label for="room-id">Mã Phòng</label>
+                <input type="text" id="room-id" name="room-id" required>
+                <label for="customer-name">Họ và Tên Khách Hàng</label>
+                <input type="text" id="customer-name" name="customer-name" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Ngày Sinh</label>
+                <input type="date" id="dob" name="dob" required>
+                <label for="gender">Giới Tính</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Nam</option>
+                    <option value="female">Nữ</option>
+                    <option value="other">Khác</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="phone">Số Điện Thoại</label>
+                <input type="tel" id="phone" name="phone" required>
+                <label for="room-quantity">Số Lượng Phòng</label>
+                <input type="number" id="room-quantity" name="room-quantity" required>
+            </div>
+            <div class="form-group">
+                <label for="room-type">Loại Phòng</label>
+                <select id="room-type" name="room-type" required>
+                    <option value="standard">Tiêu Chuẩn</option>
+                    <option value="deluxe">Cao Cấp</option>
+                    <option value="suite">Suite</option>
+                </select>
+                <label for="days-stay">Số Ngày Ở</label>
+                <input type="number" id="days-stay" name="days-stay" required>
+            </div>
+            <button type="submit">Đặt Phòng</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('booking-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+    
+            var accountId = document.getElementById('account-id').value;
+    
+            // Danh sách tài khoản giả lập
+            var existingAccounts = ["account1", "account2", "account3"];
+    
+            if (!existingAccounts.includes(accountId)) {
+                document.getElementById('error-message').innerText = 'Tài khoản không tồn tại';
+                return;
+            }
+    
+            var booking = {
+                roomId: document.getElementById('room-id').value,
+                customerName: document.getElementById('customer-name').value,
+                dob: document.getElementById('dob').value,
+                gender: document.getElementById('gender').value,
+                phone: document.getElementById('phone').value,
+                roomQuantity: document.getElementById('room-quantity').value,
+                roomType: document.getElementById('room-type').value,
+                daysStay: document.getElementById('days-stay').value
+            };
+    
+            console.log(booking);
+            alert('Phòng đã được đặt thành công!');
+    
+            // Sau khi đặt phòng thành công, bạn có thể thêm logic để lưu thông tin đặt phòng vào cơ sở dữ liệu hoặc xử lý thêm
+        });
+    </script>
+</body>
+</html>
